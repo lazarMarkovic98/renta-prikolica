@@ -1,0 +1,38 @@
+<section id="prikolice" class="trailers-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Naša Flota</span>
+      <h2>Dostupne Prikolice</h2>
+      <p>Izaberite prikolicu koja odgovara Vašim potrebama. Sve prikolice su registrovane i tehnički ispravne.</p>
+    </div>
+    <div class="trailers-grid">
+      <div
+        *ngFor="let t of trailers"
+        class="trailer-card"
+        [class.popular]="t.popular"
+        #animCard
+      >
+        <div class="popular-badge" *ngIf="t.popular">⭐ Najpopularnije</div>
+        <div class="card-icon-wrap">{{ t.icon }}</div>
+        <div class="card-body">
+          <h3>{{ t.name }}</h3>
+          <p class="card-desc">{{ t.desc }}</p>
+          <div class="card-specs">
+            <div><span class="spec-lbl">Nosivost</span><span class="spec-val">{{ t.nosivost }}</span></div>
+            <div><span class="spec-lbl">Dimenzije</span><span class="spec-val">{{ t.dimenzije }}</span></div>
+          </div>
+          <ul class="card-features">
+            <li *ngFor="let f of t.features">{{ f }}</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <div class="price">
+            <span class="price-val">{{ t.price }}</span>
+            <span class="price-per">/ dan</span>
+          </div>
+          <a (click)="scrollToContact()" class="btn-reserve">Rezerviši</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

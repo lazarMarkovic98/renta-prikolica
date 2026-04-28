@@ -1,0 +1,22 @@
+<section id="prednosti" class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Zašto Mi?</span>
+      <h2>Vaše Prednosti</h2>
+      <p>Biramo kvalitet i pouzdanost u svakom koraku, od rezervacije do povratka prikolice.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let f of features" #animEl>
+        <div class="feat-icon">{{ f.icon }}</div>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.desc }}</p>
+      </div>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-block" *ngFor="let s of stats" #animEl>
+        <strong>{{ s.value }}</strong>
+        <span>{{ s.label }}</span>
+      </div>
+    </div>
+  </div>
+</section>

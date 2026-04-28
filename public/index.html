@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renta Prikolica – Iznajmljivanje Prikolica Beograd</title>
+  <meta name="description" content="Profesionalno iznajmljivanje prikolica u Beogradu. Mala, srednja, velika prikolica i prikolica za automobile. Rezervišite online!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="container header-inner">
+      <a class="logo" href="#pocetna">
+        <span class="logo-icon">🚛</span>
+        <span class="logo-text">Renta <strong>Prikolica</strong></span>
+      </a>
+      <nav id="nav">
+        <a href="#pocetna" onclick="closeMenu()">Početna</a>
+        <a href="#prikolice" onclick="closeMenu()">Prikolice</a>
+        <a href="#prednosti" onclick="closeMenu()">Prednosti</a>
+        <a href="#kontakt" onclick="closeMenu()">Kontakt</a>
+        <a href="#kontakt" class="nav-cta" onclick="closeMenu()">Rezerviši</a>
+      </nav>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Meni">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+  <!-- ===== HERO ===== -->
+  <section id="pocetna" class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="badge">🚛 Pouzdano rentiranje prikolica</div>
+        <h1>Iznajmite Prikolicu<br /><span>Brzo i Lako</span></h1>
+        <p>Profesionalne prikolice za svaku potrebu – selidbe, prevoz vozila, građevinski materijal i više. Dostava na Vašu adresu!</p>
+        <div class="hero-actions">
+          <a href="#prikolice" class="btn-primary">Pogledaj Prikolice</a>
+          <a href="#kontakt" class="btn-secondary">Rezerviši Odmah</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>500+</strong><span>Klijenata</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>4</strong><span>Tipa prikolica</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>od 25€</strong><span>Po danu</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 520 310" xmlns="http://www.w3.org/2000/svg">
+          <!-- Road/ground -->
+          <rect x="0" y="270" width="520" height="40" rx="0" fill="#1a252f" opacity="0.4"/>
+          <!-- Trailer body -->
+          <rect x="70" y="100" width="370" height="150" rx="10" fill="#e67e22"/>
+          <rect x="80" y="112" width="350" height="128" rx="8" fill="#d35400"/>
+          <!-- Roof -->
+          <rect x="90" y="84" width="330" height="24" rx="5" fill="#e67e22"/>
+          <!-- Roof stripe -->
+          <rect x="95" y="89" width="320" height="3" rx="2" fill="rgba(255,255,255,0.2)"/>
+          <!-- Cargo door lines -->
+          <rect x="100" y="122" width="2" height="100" rx="1" fill="rgba(0,0,0,0.2)"/>
+          <rect x="200" y="122" width="2" height="100" rx="1" fill="rgba(0,0,0,0.2)"/>
+          <rect x="300" y="122" width="2" height="100" rx="1" fill="rgba(0,0,0,0.2)"/>
+          <rect x="400" y="122" width="2" height="100" rx="1" fill="rgba(0,0,0,0.2)"/>
+          <!-- Door handles -->
+          <rect x="145" y="168" width="16" height="5" rx="2" fill="rgba(255,255,255,0.4)"/>
+          <rect x="245" y="168" width="16" height="5" rx="2" fill="rgba(255,255,255,0.4)"/>
+          <rect x="345" y="168" width="16" height="5" rx="2" fill="rgba(255,255,255,0.4)"/>
+          <!-- Wheels -->
+          <circle cx="160" cy="270" r="34" fill="#1a252f"/>
+          <circle cx="160" cy="270" r="22" fill="#2c3e50"/>
+          <circle cx="160" cy="270" r="10" fill="#555"/>
+          <circle cx="160" cy="270" r="4" fill="#888"/>
+          <circle cx="360" cy="270" r="34" fill="#1a252f"/>
+          <circle cx="360" cy="270" r="22" fill="#2c3e50"/>
+          <circle cx="360" cy="270" r="10" fill="#555"/>
+          <circle cx="360" cy="270" r="4" fill="#888"/>
+          <!-- Hitch arm -->
+          <rect x="18" y="208" width="72" height="12" rx="4" fill="#bbb"/>
+          <circle cx="12" cy="214" r="12" fill="#999"/>
+          <circle cx="12" cy="214" r="6" fill="#777"/>
+          <!-- Rear lights -->
+          <rect x="440" y="125" width="10" height="18" rx="3" fill="#e74c3c"/>
+          <rect x="440" y="150" width="10" height="18" rx="3" fill="#f39c12"/>
+          <!-- Logo on trailer -->
+          <text x="175" y="175" font-family="sans-serif" font-size="15" font-weight="bold" fill="rgba(255,255,255,0.85)">RENTA PRIKOLICA</text>
+          <!-- Ground shadow -->
+          <ellipse cx="265" cy="305" rx="210" ry="8" fill="rgba(0,0,0,0.2)"/>
+        </svg>
+      </div>
+    </div>
+    <a href="#prikolice" class="scroll-hint">
+      <span>Skroluj dole</span>
+      <div class="arrow-down">↓</div>
+    </a>
+  </section>
+
+  <!-- ===== PRIKOLICE ===== -->
+  <section id="prikolice" class="trailers-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Naša Flota</span>
+        <h2>Dostupne Prikolice</h2>
+        <p>Izaberite prikolicu koja odgovara Vašim potrebama. Sve prikolice su registrovane i tehnički ispravne.</p>
+      </div>
+      <div class="trailers-grid">
+
+        <!-- Mala -->
+        <div class="trailer-card">
+          <div class="card-icon-wrap">📦</div>
+          <div class="card-body">
+            <h3>Mala Prikolica</h3>
+            <p class="card-desc">Idealna za prevoz manjih tereta, nameštaja ili opreme. Laka za upravljanje i parkiranje.</p>
+            <div class="card-specs">
+              <div><span class="spec-lbl">Nosivost</span><span class="spec-val">Do 500 kg</span></div>
+              <div><span class="spec-lbl">Dimenzije</span><span class="spec-val">2.5m × 1.3m</span></div>
+            </div>
+            <ul class="card-features">
+              <li>Zaključavanje</li>
+              <li>LED svetla</li>
+              <li>Rezervni točak</li>
+              <li>Gumena podloga</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="price"><span class="price-val">25€</span><span class="price-per">/ dan</span></div>
+            <a href="#kontakt" class="btn-reserve">Rezerviši</a>
+          </div>
+        </div>
+
+        <!-- Srednja (popular) -->
+        <div class="trailer-card popular">
+          <div class="popular-badge">⭐ Najpopularnije</div>
+          <div class="card-icon-wrap">🚛</div>
+          <div class="card-body">
+            <h3>Srednja Prikolica</h3>
+            <p class="card-desc">Svestrana prikolica za selidbe, prevoz vozila ili veće terete. Najpopularniji izbor.</p>
+            <div class="card-specs">
+              <div><span class="spec-lbl">Nosivost</span><span class="spec-val">Do 1.200 kg</span></div>
+              <div><span class="spec-lbl">Dimenzije</span><span class="spec-val">3.5m × 1.8m</span></div>
+            </div>
+            <ul class="card-features">
+              <li>Zaključavanje</li>
+              <li>LED svetla</li>
+              <li>Rezervni točak</li>
+              <li>Rampa za utovar</li>
+              <li>Cerada</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="price"><span class="price-val">40€</span><span class="price-per">/ dan</span></div>
+            <a href="#kontakt" class="btn-reserve">Rezerviši</a>
+          </div>
+        </div>
+
+        <!-- Velika -->
+        <div class="trailer-card">
+          <div class="card-icon-wrap">🏗️</div>
+          <div class="card-body">
+            <h3>Velika Prikolica</h3>
+            <p class="card-desc">Profesionalna prikolica za teška vozila, građevinski materijal ili industrijske potrebe.</p>
+            <div class="card-specs">
+              <div><span class="spec-lbl">Nosivost</span><span class="spec-val">Do 3.500 kg</span></div>
+              <div><span class="spec-lbl">Dimenzije</span><span class="spec-val">5.0m × 2.2m</span></div>
+            </div>
+            <ul class="card-features">
+              <li>Zaključavanje</li>
+              <li>LED svetla</li>
+              <li>Hidraulična rampa</li>
+              <li>Cerada</li>
+              <li>Bočna vrata</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="price"><span class="price-val">65€</span><span class="price-per">/ dan</span></div>
+            <a href="#kontakt" class="btn-reserve">Rezerviši</a>
+          </div>
+        </div>
+
+        <!-- Auto -->
+        <div class="trailer-card">
+          <div class="card-icon-wrap">🚗</div>
+          <div class="card-body">
+            <h3>Prikolica za Automobile</h3>
+            <p class="card-desc">Specijalna prikolica za transport automobila i motocikala. Opremljena fiksnim vezovima.</p>
+            <div class="card-specs">
+              <div><span class="spec-lbl">Nosivost</span><span class="spec-val">Do 2.000 kg</span></div>
+              <div><span class="spec-lbl">Dimenzije</span><span class="spec-val">4.5m × 2.0m</span></div>
+            </div>
+            <ul class="card-features">
+              <li>Fiksni vezovi</li>
+              <li>LED svetla</li>
+              <li>Niska rampa</li>
+              <li>Anti-klizna površina</li>
+              <li>Zaštita točkova</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="price"><span class="price-val">55€</span><span class="price-per">/ dan</span></div>
+            <a href="#kontakt" class="btn-reserve">Rezerviši</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PREDNOSTI ===== -->
+  <section id="prednosti" class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Zašto Mi?</span>
+        <h2>Vaše Prednosti</h2>
+        <p>Biramo kvalitet i pouzdanost u svakom koraku, od rezervacije do povratka prikolice.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feat-icon">✅</div>
+          <h3>Registrovane Prikolice</h3>
+          <p>Sve naše prikolice su tehnički ispravne, registrovane i osigurane.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">⏰</div>
+          <h3>Dostupno 24/7</h3>
+          <p>Fleksibilno radno vreme – možete rezervisati u bilo koje doba dana.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">💳</div>
+          <h3>Povoljne Cene</h3>
+          <p>Transparentne cene bez skrivenih troškova. Plaćate samo ono što koristite.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">🚚</div>
+          <h3>Dostava na Adresu</h3>
+          <p>Besplatna dostava i preuzimanje prikolice na Vašoj adresi unutar grada.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">🛡️</div>
+          <h3>Osiguranje Uključeno</h3>
+          <p>Svaka prikolica dolazi sa osnovnim osiguranjem od odgovornosti.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">📞</div>
+          <h3>Stručna Podrška</h3>
+          <p>Tim stručnjaka spreman da Vam pomogne u odabiru prave prikolice.</p>
+        </div>
+      </div>
+      <div class="stats-bar">
+        <div class="stat-block"><strong>500+</strong><span>Zadovoljnih Klijenata</span></div>
+        <div class="stat-block"><strong>4</strong><span>Tipa Prikolica</span></div>
+        <div class="stat-block"><strong>5★</strong><span>Prosečna Ocena</span></div>
+        <div class="stat-block"><strong>10g</strong><span>Iskustva</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KONTAKT ===== -->
+  <section id="kontakt" class="contact-section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <span class="section-tag">Kontakt</span>
+          <h2>Rezervišite Prikolicu</h2>
+          <p>Ispunite formu i kontaktiraćemo Vas u roku od 1 sata da potvrdimo rezervaciju.</p>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-icon">📞</span>
+              <div>
+                <strong>Telefon</strong>
+                <a href="tel:+381601234567">+381 60 123 45 67</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📧</span>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:info@rentaprikolica.rs">info@rentaprikolica.rs</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📍</span>
+              <div>
+                <strong>Lokacija</strong>
+                <span>Beograd, Srbija</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">🕐</span>
+              <div>
+                <strong>Radno Vreme</strong>
+                <span>Pon–Ned: 07:00–22:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <div id="success-msg" class="success-msg" style="display:none">
+            <div class="success-icon">✅</div>
+            <h3>Hvala Vam!</h3>
+            <p>Vaša rezervacija je primljena. Kontaktiraćemo Vas uskoro.</p>
+            <button onclick="resetForm()">Nova Rezervacija</button>
+          </div>
+          <form id="rezervacija-form" onsubmit="submitForm(event)" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Ime i Prezime *</label>
+                <input type="text" id="name" name="name" placeholder="Vaše ime" required />
+                <span class="err" id="name-err">Unesite Vaše ime</span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Telefon *</label>
+                <input type="tel" id="phone" name="phone" placeholder="06x xxx xxxx" required />
+                <span class="err" id="phone-err">Unesite ispravan broj telefona</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Adresa *</label>
+              <input type="email" id="email" name="email" placeholder="vas@email.com" required />
+              <span class="err" id="email-err">Unesite ispravnu email adresu</span>
+            </div>
+            <div class="form-group">
+              <label for="trailer">Tip Prikolice *</label>
+              <select id="trailer" name="trailer" required>
+                <option value="">-- Izaberite prikolicu --</option>
+                <option>Mala Prikolica (25€/dan)</option>
+                <option>Srednja Prikolica (40€/dan)</option>
+                <option>Velika Prikolica (65€/dan)</option>
+                <option>Prikolica za Automobile (55€/dan)</option>
+              </select>
+              <span class="err" id="trailer-err">Izaberite tip prikolice</span>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dateFrom">Datum Od *</label>
+                <input type="date" id="dateFrom" name="dateFrom" required />
+                <span class="err" id="dateFrom-err">Izaberite datum</span>
+              </div>
+              <div class="form-group">
+                <label for="dateTo">Datum Do *</label>
+                <input type="date" id="dateTo" name="dateTo" required />
+                <span class="err" id="dateTo-err">Izaberite datum</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Napomena</label>
+              <textarea id="message" name="message" rows="4" placeholder="Dodatne napomene ili pitanja..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">📅 Pošalji Rezervaciju</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">🚛 Renta <strong>Prikolica</strong></div>
+          <p>Vaš pouzdani partner za rentiranje prikolica u Beogradu i okolini.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigacija</h4>
+          <a href="#pocetna">Početna</a>
+          <a href="#prikolice">Prikolice</a>
+          <a href="#prednosti">Prednosti</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+        <div class="footer-col">
+          <h4>Prikolice</h4>
+          <a href="#prikolice">Mala Prikolica</a>
+          <a href="#prikolice">Srednja Prikolica</a>
+          <a href="#prikolice">Velika Prikolica</a>
+          <a href="#prikolice">Prikolica za Automobile</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <p>📞 <a href="tel:+381601234567">+381 60 123 45 67</a></p>
+          <p>📧 <a href="mailto:info@rentaprikolica.rs">info@rentaprikolica.rs</a></p>
+          <p>📍 Beograd, Srbija</p>
+          <p>🕐 Pon–Ned: 07:00–22:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p id="footer-year">© 2025 Renta Prikolica. Sva prava zadržana.</p>
+        <div>
+          <a href="#">Uslovi korišćenja</a>
+          <a href="#">Politika privatnosti</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile menu
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+      document.getElementById('overlay').classList.toggle('show');
+    }
+    function closeMenu() {
+      document.getElementById('nav').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('active');
+      document.getElementById('overlay').classList.remove('show');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    // Form validation & submit
+    function submitForm(e) {
+      e.preventDefault();
+      let valid = true;
+
+      const fields = [
+        { id: 'name',     check: v => v.trim().length >= 2 },
+        { id: 'phone',    check: v => /^(\+381|0)[0-9]{8,9}$/.test(v.trim()) },
+        { id: 'email',    check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+        { id: 'trailer',  check: v => v !== '' },
+        { id: 'dateFrom', check: v => v !== '' },
+        { id: 'dateTo',   check: v => v !== '' },
+      ];
+
+      fields.forEach(({ id, check }) => {
+        const el = document.getElementById(id);
+        const err = document.getElementById(id + '-err');
+        if (!check(el.value)) {
+          el.classList.add('invalid');
+          err.style.display = 'block';
+          valid = false;
+        } else {
+          el.classList.remove('invalid');
+          err.style.display = 'none';
+        }
+      });
+
+      if (valid) {
+        document.getElementById('rezervacija-form').style.display = 'none';
+        document.getElementById('success-msg').style.display = 'block';
+      }
+    }
+
+    function resetForm() {
+      document.getElementById('rezervacija-form').reset();
+      document.getElementById('rezervacija-form').style.display = 'block';
+      document.getElementById('success-msg').style.display = 'none';
+      document.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+      document.querySelectorAll('.err').forEach(el => el.style.display = 'none');
+    }
+
+    // Footer year
+    document.getElementById('footer-year').textContent =
+      `© ${new Date().getFullYear()} Renta Prikolica. Sva prava zadržana.`;
+
+    // Intersection Observer for card animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.trailer-card, .feature-card, .stat-block').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
