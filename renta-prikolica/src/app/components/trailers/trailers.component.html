@@ -33,7 +33,7 @@
         <div class="card-footer">
           <div class="price">
             <span class="price-val">{{ t.price }}</span>
-            <span class="price-per">/ dan</span>
+            <span class="price-per">{{ t.priceUnit ? t.priceUnit : '/ dan' }}</span>
           </div>
           <a (click)="onReserveClick($event)" class="btn-reserve">Rezerviši</a>
         </div>

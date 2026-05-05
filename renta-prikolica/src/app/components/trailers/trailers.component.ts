@@ -40,6 +40,22 @@ export class TrailersComponent implements AfterViewInit {
         'assets/trailers/velika-2.jpeg',
         'assets/trailers/velika-3.jpeg'
       ]
+    },
+    {
+      icon: '🚚',
+      name: 'Prevoz kamionom - kiper',
+      desc: 'Pružamo uslugu kamionskog prevoza kiperom za rasuti i građevinski teret.',
+      nosivost: 'Do 5.5 t',
+      dimenzije: '4m x 2.5m',
+      features: ['Cena: 1€ po kilometru', 'Prevoz rasutog tereta', 'Fleksibilan termin', 'Dolazak na adresu'],
+      price: '1€',
+      priceUnit: '/ km',
+      popular: false,
+      images: [
+        'assets/trailers/kiper-1.jpeg',
+        'assets/trailers/kiper-2.jpeg',
+        'assets/trailers/kiper-3.jpeg'
+      ]
     }
   ];
 

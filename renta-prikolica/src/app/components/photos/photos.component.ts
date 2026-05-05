@@ -6,56 +6,47 @@ import { Component } from '@angular/core';
   styleUrls: ['./photos.component.scss']
 })
 export class PhotosComponent {
-  photos = [
-    {
-      src: 'assets/photos/mala-1.jpeg',
-      alt: '',
-      caption: ''
-    },
-    {
-      src: 'assets/photos/mala-2.jpeg',
-      alt: '',
-      caption: ''
-    },
-    {
-      src: 'assets/photos/mala-3.jpeg',
-      alt: '',
-      caption: ''
-    },
-    {
-      src: 'assets/photos/mala-4.jpeg',
-      alt: '',
-      caption: ''
-    },
-    {
-      src: 'assets/photos/velika-1.jpeg',
-      alt: '',
-      caption: ''
-    },
-    {
-      src: 'assets/photos/velika-2.jpeg',
-      alt: '',
-      caption: ''
-    },
-    {
-      src: 'assets/photos/velika-3.jpeg',
-      alt: '',
-      caption: ''
-    }
+  private readonly pageSize = 5;
+  private visibleCount = this.pageSize;
+
+  private readonly photoFiles = [
+    'kiper-1.jpeg',
+    'kiper-2.jpeg',
+    'kiper-3.jpeg',
+    'mala-1.jpeg',
+    'mala-2.jpeg',
+    'mala-3.jpeg',
+    'mala-4.jpeg',
+    'velika-1.jpeg',
+    'velika-2.jpeg',
+    'velika-3.jpeg'
   ];
 
-  lightboxSrc: string | null = null;
-  lightboxAlt = '';
+  photos = this.photoFiles.map(file => ({
+    src: `assets/photos/${file}`
+  }));
 
-  openLightbox(src: string, alt: string): void {
+  lightboxSrc: string | null = null;
+
+  get visiblePhotos() {
+    return this.photos.slice(0, this.visibleCount);
+  }
+
+  get canLoadMore(): boolean {
+    return this.visibleCount < this.photos.length;
+  }
+
+  loadMore(): void {
+    this.visibleCount = Math.min(this.visibleCount + this.pageSize, this.photos.length);
+  }
+
+  openLightbox(src: string): void {
     this.lightboxSrc = src;
-    this.lightboxAlt = alt;
     document.body.style.overflow = 'hidden';
   }
 
   closeLightbox(): void {
     this.lightboxSrc = null;
-    this.lightboxAlt = '';
     document.body.style.overflow = '';
   }
 }

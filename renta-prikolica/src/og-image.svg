@@ -22,7 +22,7 @@
   <path d="M1100 290 L1180 290 L1190 260 L1190 310 L1180 320 L1100 320 Z" fill="#e67e22" fill-opacity="0.4"/>
 
   <!-- Logo / Brand -->
-  <text x="80" y="200" font-size="32" font-family="Arial,sans-serif" fill="#e67e22" font-weight="700" letter-spacing="2">🚛 RENTA PRIKOLICA</text>
+  <text x="80" y="200" font-size="32" font-family="Arial,sans-serif" fill="#e67e22" font-weight="700" letter-spacing="2">🚛 IZNAJMLJIVANJE PRIKOLICA</text>
 
   <!-- Main title -->
   <text x="80" y="310" font-size="72" font-family="Arial,sans-serif" fill="#ffffff" font-weight="800">Iznajmite prikolicu</text>
@@ -32,5 +32,5 @@
   <text x="80" y="460" font-size="28" font-family="Arial,sans-serif" fill="#aabbcc">Mala i velika prikolica • Od 25€/dan • Svaki dan dostupno</text>
 
   <!-- URL -->
-  <text x="80" y="560" font-size="22" font-family="Arial,sans-serif" fill="#667788">renta-prikolica.vercel.app</text>
+  <text x="80" y="560" font-size="22" font-family="Arial,sans-serif" fill="#667788">iznajmiprikolicu.com</text>
 </svg>

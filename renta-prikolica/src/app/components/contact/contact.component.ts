@@ -10,7 +10,7 @@ export class ContactComponent {
 
   contactInfo = [
     { icon: '📞', label: 'Telefon', value: '+381 62 72 73 43', href: 'tel:+38162727343', isLink: true },
-    { icon: '📧', label: 'Email', value: 'lakimar27@gmail.com', href: 'mailto:lakimar27@gmail.com', isLink: true },
+    { icon: '📧', label: 'Email', value: 'kontakt@iznajmiprikolicu.com', href: 'mailto:kontakt@iznajmiprikolicu.com', isLink: true },
     { icon: '📍', label: 'Lokacija', value: 'Buljane, Paraćin', isLink: false },
     { icon: '🕐', label: 'Radno Vreme', value: 'Pon–Ned: 07:00–22:00', isLink: false }
   ];

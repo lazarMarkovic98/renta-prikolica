@@ -9,22 +9,25 @@
     <div class="photos-grid">
       <div
         class="photo-card"
-        *ngFor="let photo of photos"
-        (click)="openLightbox(photo.src, photo.alt)"
+        *ngFor="let photo of visiblePhotos"
+        (click)="openLightbox(photo.src)"
         tabindex="0"
         role="button"
-        (keydown.enter)="openLightbox(photo.src, photo.alt)"
-        [attr.aria-label]="'Uvećaj: ' + photo.caption"
+        (keydown.enter)="openLightbox(photo.src)"
+        [attr.aria-label]="'Uvećaj sliku'"
       >
-        <img [src]="photo.src" [alt]="photo.alt" loading="lazy" />
-        <div class="photo-caption">{{ photo.caption }}</div>
+        <img [src]="photo.src" loading="lazy" />
         <div class="photo-overlay"><span>🔍</span></div>
       </div>
+    </div>
+
+    <div class="photos-actions" *ngIf="canLoadMore">
+      <button type="button" class="btn-load-more" (click)="loadMore()">Prikaži još</button>
     </div>
   </div>
 
   <div class="lightbox-overlay" *ngIf="lightboxSrc" (click)="closeLightbox()">
     <button type="button" class="lightbox-close" (click)="closeLightbox()" aria-label="Zatvori">×</button>
-    <img [src]="lightboxSrc" [alt]="lightboxAlt" (click)="$event.stopPropagation()" />
+    <img [src]="lightboxSrc" (click)="$event.stopPropagation()" />
   </div>
 </section>
