@@ -17,12 +17,13 @@ export class TrailersComponent implements AfterViewInit {
       nosivost: 'Do 500 kg',
       dimenzije: '2.5m × 1.3m',
       features: ['Cerada', 'Rezervni točak', 'Tepih podloga', 'Carinska sajla'],
-      price: '25€',
+      price: '30€',
       popular: false,
       images: [
-        'assets/trailers/mala-1.svg',
-        'assets/trailers/mala-2.svg',
-        'assets/trailers/mala-3.svg'
+        'assets/trailers/mala-1.jpeg',
+        'assets/trailers/mala-2.jpeg',
+        'assets/trailers/mala-3.jpeg',
+        'assets/trailers/mala-4.jpeg'
       ]
     },
     {
@@ -32,12 +33,12 @@ export class TrailersComponent implements AfterViewInit {
       nosivost: 'Do 1.200 kg',
       dimenzije: '3.5m × 1.8m',
       features: ['Cerada', 'Udarna ruda', 'Dve osovine' ,'Rampa za utovar'],
-      price: '35€',
+      price: '50€',
       popular: true,
       images: [
-        'assets/trailers/velika-1.svg',
-        'assets/trailers/velika-2.svg',
-        'assets/trailers/velika-3.svg'
+        'assets/trailers/velika-1.jpeg',
+        'assets/trailers/velika-2.jpeg',
+        'assets/trailers/velika-3.jpeg'
       ]
     }
   ];

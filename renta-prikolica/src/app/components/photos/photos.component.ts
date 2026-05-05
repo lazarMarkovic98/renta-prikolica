@@ -8,34 +8,39 @@ import { Component } from '@angular/core';
 export class PhotosComponent {
   photos = [
     {
-      src: 'assets/photos/photo-1.svg',
-      alt: 'Prikolica na putu u inostranstvu',
-      caption: 'Na evropskim putevima'
+      src: 'assets/photos/mala-1.jpeg',
+      alt: '',
+      caption: ''
     },
     {
-      src: 'assets/photos/photo-2.svg',
-      alt: 'Prikolica napunjena teretom',
-      caption: 'Siguran prevoz tereta'
+      src: 'assets/photos/mala-2.jpeg',
+      alt: '',
+      caption: ''
     },
     {
-      src: 'assets/photos/photo-3.svg',
-      alt: 'Zadovoljan korisnik sa priklolicom',
-      caption: 'Zadovoljni korisnici'
+      src: 'assets/photos/mala-3.jpeg',
+      alt: '',
+      caption: ''
     },
     {
-      src: 'assets/photos/photo-4.svg',
-      alt: 'Prikolica tokom selidbe',
-      caption: 'Selidba bez stresa'
+      src: 'assets/photos/mala-4.jpeg',
+      alt: '',
+      caption: ''
     },
     {
-      src: 'assets/photos/photo-5.svg',
-      alt: 'Prikolica sa motorom',
-      caption: 'Prevoz vozila'
+      src: 'assets/photos/velika-1.jpeg',
+      alt: '',
+      caption: ''
     },
     {
-      src: 'assets/photos/photo-6.svg',
-      alt: 'Prikolica na planini',
-      caption: 'Uvek na cilju'
+      src: 'assets/photos/velika-2.jpeg',
+      alt: '',
+      caption: ''
+    },
+    {
+      src: 'assets/photos/velika-3.jpeg',
+      alt: '',
+      caption: ''
     }
   ];
 
