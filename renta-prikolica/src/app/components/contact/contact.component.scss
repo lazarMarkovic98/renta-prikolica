@@ -82,6 +82,19 @@
   box-shadow: 0 6px 36px rgba(0,0,0,0.08);
 }
 
+.map-wrap {
+  padding: 12px;
+  overflow: hidden;
+}
+
+.map-embed {
+  width: 100%;
+  min-height: 450px;
+  border: 0;
+  border-radius: 14px;
+  display: block;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -186,8 +199,11 @@
 @media (max-width: 900px) {
   .contact-wrapper { grid-template-columns: 1fr; }
   .contact-form-wrap { padding: 30px 22px; }
+  .map-wrap { padding: 10px; }
+  .map-embed { min-height: 360px; }
 }
 
 @media (max-width: 600px) {
   .form-row { grid-template-columns: 1fr; }
+  .map-embed { min-height: 300px; }
 }

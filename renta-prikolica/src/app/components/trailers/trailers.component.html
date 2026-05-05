@@ -10,6 +10,11 @@
         *ngFor="let t of trailers"
         class="trailer-card"
         [class.popular]="t.popular"
+        (click)="openGallery(t)"
+        tabindex="0"
+        role="button"
+        (keydown.enter)="openGallery(t)"
+        (keydown.space)="openGallery(t)"
         #animCard
       >
         <div class="popular-badge" *ngIf="t.popular">⭐ Najpopularnije</div>
@@ -30,9 +35,15 @@
             <span class="price-val">{{ t.price }}</span>
             <span class="price-per">/ dan</span>
           </div>
-          <a (click)="scrollToContact()" class="btn-reserve">Rezerviši</a>
+          <a (click)="onReserveClick($event)" class="btn-reserve">Rezerviši</a>
         </div>
       </div>
     </div>
   </div>
+
+  <app-gallery
+    *ngIf="selectedTrailer"
+    [trailer]="selectedTrailer"
+    (closed)="closeGallery()"
+  ></app-gallery>
 </section>

@@ -2,14 +2,14 @@
   <div class="container header-inner">
     <a class="logo" (click)="scrollTo('pocetna')">
       <span class="logo-icon">🚛</span>
-      <span class="logo-text">Renta <strong>Prikolica</strong></span>
+      <span class="logo-text">Najam <strong>auto prikolica</strong></span>
     </a>
     <nav id="nav" [class.open]="isMenuOpen">
       <a (click)="scrollTo('pocetna')">Početna</a>
       <a (click)="scrollTo('prikolice')">Prikolice</a>
       <a (click)="scrollTo('prednosti')">Prednosti</a>
+      <a (click)="scrollTo('galerija')">Galerija</a>
       <a (click)="scrollTo('kontakt')">Kontakt</a>
-      <a (click)="scrollTo('kontakt')" class="nav-cta">Rezerviši</a>
     </nav>
     <button class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()" aria-label="Meni">
       <span></span><span></span><span></span>

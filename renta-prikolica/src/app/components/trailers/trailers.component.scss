@@ -5,8 +5,9 @@
 
 .trailers-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  justify-items: center;
 }
 
 .trailer-card {
@@ -14,9 +15,12 @@
   border-radius: 18px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 560px;
   box-shadow: 0 4px 22px rgba(0,0,0,0.07);
   border: 2px solid transparent;
   position: relative;
+  cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
   opacity: 0;
   transform: translateY(20px);
@@ -35,6 +39,11 @@
     border-color: #e67e22;
     box-shadow: 0 4px 22px rgba(230,126,34,0.18);
     &:hover { box-shadow: 0 16px 44px rgba(230,126,34,0.28); }
+  }
+
+  &:focus-visible {
+    outline: 3px solid #e67e22;
+    outline-offset: 4px;
   }
 }
 

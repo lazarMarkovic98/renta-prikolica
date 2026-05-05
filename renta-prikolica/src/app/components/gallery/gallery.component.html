@@ -1,0 +1,32 @@
+<div class="gallery-overlay" (click)="close()">
+  <div class="gallery-modal" (click)="$event.stopPropagation()">
+    <button type="button" class="gallery-close" (click)="close()" aria-label="Zatvori galeriju">×</button>
+
+    <div class="gallery-main">
+      <button type="button" class="gallery-nav prev" (click)="prev()" aria-label="Prethodna slika">‹</button>
+      <img
+        [src]="trailer.images[selectedImageIndex]"
+        [alt]="trailer.name + ' fotografija ' + (selectedImageIndex + 1)"
+      />
+      <button type="button" class="gallery-nav next" (click)="next()" aria-label="Sledeća slika">›</button>
+    </div>
+
+    <div class="gallery-meta">
+      <h3>{{ trailer.name }}</h3>
+      <span>{{ selectedImageIndex + 1 }} / {{ trailer.images.length }}</span>
+    </div>
+
+    <div class="gallery-thumbs">
+      <button
+        type="button"
+        class="thumb"
+        *ngFor="let image of trailer.images; let i = index"
+        [class.active]="i === selectedImageIndex"
+        (click)="selectImage(i)"
+        [attr.aria-label]="'Otvori sliku ' + (i + 1)"
+      >
+        <img [src]="image" [alt]="trailer.name + ' thumb ' + (i + 1)" />
+      </button>
+    </div>
+  </div>
+</div>

@@ -17,102 +17,20 @@
         </div>
       </div>
 
-      <div class="contact-form-wrap">
-        <!-- Success message -->
-        <div class="success-msg" *ngIf="success">
-          <div class="success-icon">✅</div>
-          <h3>Hvala Vam!</h3>
-          <p>Vaša rezervacija je primljena. Kontaktiraćemo Vas uskoro.</p>
-          <button (click)="resetForm()">Nova Rezervacija</button>
-        </div>
-
-        <!-- Reservation form -->
-        <form *ngIf="!success" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Ime i Prezime *</label>
-              <input
-                type="text"
-                id="name"
-                formControlName="name"
-                placeholder="Vaše ime"
-                [class.invalid]="isInvalid('name')"
-              />
-              <span class="err" *ngIf="isInvalid('name')">Unesite Vaše ime</span>
-            </div>
-            <div class="form-group">
-              <label for="phone">Telefon *</label>
-              <input
-                type="tel"
-                id="phone"
-                formControlName="phone"
-                placeholder="06x xxx xxxx"
-                [class.invalid]="isInvalid('phone')"
-              />
-              <span class="err" *ngIf="isInvalid('phone')">Unesite ispravan broj telefona</span>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Adresa *</label>
-            <input
-              type="email"
-              id="email"
-              formControlName="email"
-              placeholder="vas@email.com"
-              [class.invalid]="isInvalid('email')"
-            />
-            <span class="err" *ngIf="isInvalid('email')">Unesite ispravnu email adresu</span>
-          </div>
-
-          <div class="form-group">
-            <label for="trailer">Tip Prikolice *</label>
-            <select id="trailer" formControlName="trailer" [class.invalid]="isInvalid('trailer')">
-              <option value="">-- Izaberite prikolicu --</option>
-              <option>Mala Prikolica (25€/dan)</option>
-              <option>Srednja Prikolica (40€/dan)</option>
-              <option>Velika Prikolica (65€/dan)</option>
-              <option>Prikolica za Automobile (55€/dan)</option>
-            </select>
-            <span class="err" *ngIf="isInvalid('trailer')">Izaberite tip prikolice</span>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="dateFrom">Datum Od *</label>
-              <input
-                type="date"
-                id="dateFrom"
-                formControlName="dateFrom"
-                [class.invalid]="isInvalid('dateFrom')"
-              />
-              <span class="err" *ngIf="isInvalid('dateFrom')">Izaberite datum</span>
-            </div>
-            <div class="form-group">
-              <label for="dateTo">Datum Do *</label>
-              <input
-                type="date"
-                id="dateTo"
-                formControlName="dateTo"
-                [class.invalid]="isInvalid('dateTo')"
-              />
-              <span class="err" *ngIf="isInvalid('dateTo')">Izaberite datum</span>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Napomena</label>
-            <textarea
-              id="message"
-              formControlName="message"
-              rows="4"
-              placeholder="Dodatne napomene ili pitanja..."
-            ></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">📅 Pošalji Rezervaciju</button>
-        </form>
+      <div class="contact-form-wrap map-wrap">
+        <iframe
+          class="map-embed"
+          src="https://maps.google.com/maps?q=43.900049,21.532957&z=17&output=embed"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Lokacija na mapi"
+        ></iframe>
       </div>
+
     </div>
   </div>
 </section>

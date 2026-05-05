@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#f7f9fb"/>
+  <rect x="250" y="300" width="520" height="230" rx="24" fill="#ffffff" stroke="#98a8b8" stroke-width="8"/>
+  <rect x="300" y="340" width="420" height="120" rx="14" fill="#edf2f6"/>
+  <circle cx="360" cy="560" r="52" fill="#2c3e50"/>
+  <circle cx="660" cy="560" r="52" fill="#2c3e50"/>
+  <path d="M770 410 L920 410 L980 370 L980 460 L920 460 L770 460 Z" fill="#d8e1ea" stroke="#98a8b8" stroke-width="8"/>
+  <rect x="955" y="402" width="130" height="14" rx="7" fill="#7f8c8d"/>
+  <text x="80" y="100" font-size="56" font-family="Arial, sans-serif" fill="#2c3e50" font-weight="700">Mala Prikolica - Pogled 3</text>
+</svg>

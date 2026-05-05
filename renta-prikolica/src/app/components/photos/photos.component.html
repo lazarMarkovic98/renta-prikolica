@@ -1,0 +1,30 @@
+<section id="galerija" class="photos-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Galerija</span>
+      <h2>Prikolice u Akciji</h2>
+      <p>Pogledajte kako naše prikolice rade — na putevima u inostranstvu, napunjene teretom i sa zadovoljnim korisnicima.</p>
+    </div>
+
+    <div class="photos-grid">
+      <div
+        class="photo-card"
+        *ngFor="let photo of photos"
+        (click)="openLightbox(photo.src, photo.alt)"
+        tabindex="0"
+        role="button"
+        (keydown.enter)="openLightbox(photo.src, photo.alt)"
+        [attr.aria-label]="'Uvećaj: ' + photo.caption"
+      >
+        <img [src]="photo.src" [alt]="photo.alt" loading="lazy" />
+        <div class="photo-caption">{{ photo.caption }}</div>
+        <div class="photo-overlay"><span>🔍</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox-overlay" *ngIf="lightboxSrc" (click)="closeLightbox()">
+    <button type="button" class="lightbox-close" (click)="closeLightbox()" aria-label="Zatvori">×</button>
+    <img [src]="lightboxSrc" [alt]="lightboxAlt" (click)="$event.stopPropagation()" />
+  </div>
+</section>

@@ -1,0 +1,136 @@
+.gallery-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 21, 28, 0.82);
+  backdrop-filter: blur(3px);
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+
+.gallery-modal {
+  width: min(960px, 100%);
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: #f3f5f8;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+
+  &:hover { background: #e9edf2; }
+}
+
+.gallery-main {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #e9edf2;
+    display: block;
+  }
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &.prev { left: 12px; }
+  &.next { right: 12px; }
+}
+
+.gallery-meta {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 800;
+  }
+
+  span {
+    font-size: 0.9rem;
+    color: #667;
+    font-weight: 700;
+  }
+}
+
+.gallery-thumbs {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.thumb {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  transition: border-color 0.2s;
+
+  &.active {
+    border-color: #e67e22;
+  }
+
+  img {
+    width: 100%;
+    height: 86px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-overlay { padding: 14px; }
+  .gallery-modal { padding: 14px; }
+  .gallery-main img { height: 300px; }
+
+  .gallery-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 1.7rem;
+  }
+
+  .thumb img { height: 70px; }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#fdf3e3"/>
+  <circle cx="300" cy="240" r="90" fill="#f4c97e" stroke="#e67e22" stroke-width="5"/>
+  <ellipse cx="300" cy="370" rx="110" ry="55" fill="#f4c97e" stroke="#e67e22" stroke-width="5"/>
+  <rect x="430" y="310" width="280" height="160" rx="14" fill="#fff" stroke="#b8813a" stroke-width="5"/>
+  <circle cx="530" cy="488" r="38" fill="#2c3e50"/>
+  <circle cx="650" cy="488" r="38" fill="#2c3e50"/>
+  <path d="M280" y="220" font-size="60" font-family="serif">😊</path>
+  <text x="40" y="80" font-size="38" font-family="Arial,sans-serif" fill="#7a4a00" font-weight="700">Zadovoljni korisnici</text>
+  <text x="40" y="130" font-size="22" font-family="Arial,sans-serif" fill="#a06820">Hiljade uspešnih iznajmljivanja</text>
+</svg>

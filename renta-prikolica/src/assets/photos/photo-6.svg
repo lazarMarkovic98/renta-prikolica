@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#e4ede0"/>
+  <polygon points="400,60 650,280 150,280" fill="#8aab78" stroke="#5a7a50" stroke-width="4"/>
+  <polygon points="400,110 580,280 220,280" fill="#6a9a58"/>
+  <rect x="200" y="360" width="400" height="160" rx="14" fill="#fff" stroke="#5a7a50" stroke-width="6"/>
+  <circle cx="300" cy="535" r="38" fill="#2c3e50"/>
+  <circle cx="500" cy="535" r="38" fill="#2c3e50"/>
+  <path d="M600 380 L700 380 L720 345 L720 395 L700 400 L600 400 Z" fill="#b8d0a8" stroke="#5a7a50" stroke-width="5"/>
+  <text x="40" y="80" font-size="38" font-family="Arial,sans-serif" fill="#1a3010" font-weight="700">Uvek na cilju</text>
+  <text x="40" y="125" font-size="22" font-family="Arial,sans-serif" fill="#3a5a30">Planina, more, grad — stižemo svuda</text>
+</svg>
