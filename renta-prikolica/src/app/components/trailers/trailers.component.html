@@ -13,17 +13,22 @@
         (click)="openGallery(t)"
         tabindex="0"
         role="button"
+        [attr.aria-label]="'Otvori galeriju za: ' + t.name"
         (keydown.enter)="openGallery(t)"
-        (keydown.space)="openGallery(t)"
+        (keydown.space.prevent)="openGallery(t)"
         #animCard
       >
         <div class="popular-badge" *ngIf="t.popular">⭐ Najpopularnije</div>
-        <div class="card-icon-wrap">{{ t.icon }}</div>
+        <div class="gallery-badge">Klikni za slike</div>
+        <div class="card-icon-wrap">
+          <img [src]="t.icon" [alt]="t.name" class="card-icon-image" />
+        </div>
         <div class="card-body">
           <h3>{{ t.name }}</h3>
           <p class="card-desc">{{ t.desc }}</p>
           <div class="card-specs">
             <div><span class="spec-lbl">Nosivost</span><span class="spec-val">{{ t.nosivost }}</span></div>
+            <div><span class="spec-lbl">Bruto</span><span class="spec-val">{{ t.bruto }}</span></div>
             <div><span class="spec-lbl">Dimenzije</span><span class="spec-val">{{ t.dimenzije }}</span></div>
           </div>
           <ul class="card-features">
@@ -40,7 +45,9 @@
       </div>
     </div>
   </div>
-
+  <div class="section-header">
+      <br><p><b><i>Za višednevni najam mogućnost korekcije cene.</i></b></p>
+  </div>
   <app-gallery
     *ngIf="selectedTrailer"
     [trailer]="selectedTrailer"

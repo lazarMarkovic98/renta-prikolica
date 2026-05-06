@@ -3,6 +3,7 @@ export interface Trailer {
   name: string;
   desc: string;
   nosivost: string;
+  bruto: string;
   dimenzije: string;
   features: string[];
   price: string;
